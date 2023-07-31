@@ -141,7 +141,7 @@ def main(exmcode,rno):
 	#d.update(a)
 @app.route('/rno=<rno>',methods=["POST" ,"GET"])   
 def index(rno):	
-	if request.method == 'POST':
+	if request.method == 'GET':
 		print(request)
 		#rno=request.args.get('rno',default = "20UJ1A0449",type= str)
 		print(rno)
