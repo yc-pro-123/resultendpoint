@@ -1,0 +1,22 @@
+{
+  "builds":[
+    "src":"tempmain1.py",
+    "use":"@vercel/python"
+    
+
+  ]
+  
+  "routes":[
+  "src":"/(.*)",
+  "dest":"tempmain1.py"
+
+  
+  
+  ]
+  
+}  
+  
+  
+  
+  
+
