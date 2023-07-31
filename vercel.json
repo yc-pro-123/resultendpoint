@@ -1,6 +1,6 @@
 {
   "builds":[
-    "src":"tempmain1.py",
+    "src":"testgoldenapi.py",
     "use":"@vercel/python"
     
 
@@ -8,7 +8,7 @@
   
   "routes":[
   "src":"/(.*)",
-  "dest":"tempmain1.py"
+  "dest":"testgoldenapi.py"
 
   
   
