@@ -1,22 +1,15 @@
-{
-  "builds":[
-    "src":"testgoldenapi.py",
-    "use":"@vercel/python"
-    
-
+{ "version":2,
+  "builds":[ {
+    "src":"app.py",
+    "use":"@vercel/python" }
   ]
-  
-  "routes":[
+  ,
+  "routes":[ {
   "src":"/(.*)",
-  "dest":"testgoldenapi.py"
-
-  
-  
+  "dest":"app.py" }
   ]
-  
 }  
   
   
   
   
-
