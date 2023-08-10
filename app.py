@@ -171,7 +171,7 @@ async def main1(ap):
     	
 
 	   	
-@app.route('/rno={rno}',methods=["POST" ,"GET"])
+@app.route('/rno=<rno>',methods=["POST" ,"GET"])
 def main():
     if ((request.method== "POST")or (request.method=="GET")):
     #mem rexognition
