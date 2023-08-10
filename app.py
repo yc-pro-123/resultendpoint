@@ -173,7 +173,7 @@ async def main1(ap):
 	   	
 @app.route('/rno=<rno>',methods=["POST" ,"GET"])
 def main(rno):
-    if ((request.method== "POST")or (request.method=="GET")):
+    if request.method=="GET":
     #mem rexognition
         if rno[4:6]=="1A":
         	mem = "REG"
