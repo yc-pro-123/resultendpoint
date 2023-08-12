@@ -10,7 +10,6 @@ app = Flask('__name__')
 
 api ="http://results.jntuh.ac.in/resultAction"
 
-rno="20UJ1A0449"
 # normal result fetch
 async def reg(session,code,rno):	
 	param={"degree":"btech","examCode":code,"etype":"r17","result":"null","grad":"null","type":"intgrade","htno":rno
