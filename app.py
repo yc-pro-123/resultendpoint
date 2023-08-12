@@ -190,16 +190,18 @@ def index(rno):
     #print(data)
     return json.dumps(data)
 
-
+@app.route('/',methods=["POST","GET"])
+def intro(rno):
+    if request.method=="GET":
+	    return "<h1>Welcome !!</h1>"
 @app.route('/rno=<rno>',methods=["POST","GET"])    
 def main(rno):
     try:
         return index(rno)
     except:
         return "<h1>Try Again Later !!</h1>"
-@app.route('/',methods=["POST","GET"])
-def main(rno):
-    return "<h1>Welcome !!</h1>"
+
+
 if __name__ == "__main__":
     #main(rno)  
     app.run()  
