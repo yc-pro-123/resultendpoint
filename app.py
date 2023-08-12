@@ -196,7 +196,10 @@ def main(rno):
     try:
         return index(rno)
     except:
-        "<h1>Try Again Later !!</h1>"
+        return "<h1>Try Again Later !!</h1>"
+@app.route('/',methods=["POST","GET"])
+def main(rno):
+    return "<h1>Welcome !!</h1>"
 if __name__ == "__main__":
     #main(rno)  
     app.run()  
