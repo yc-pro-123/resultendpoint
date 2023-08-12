@@ -100,7 +100,7 @@ async def invalid_htno(data):
 
 async def fetch(session,key):
 	data,f_status=None,None
-	print("fetch started....",end="")
+	print("fetch started....",end="\r")
 	#print(ssem)		
 	#exmcode=sem_codes[sse]	
 	#key = exmcode["reg"]
@@ -166,7 +166,8 @@ def index(rno):
     details=asyncio.run(info(r[0],rno))
     print("ooooooooo")
     e=asyncio.run(main1(r))
-    print(len(e))
+    print(len(e),"\n",e)
+	
     for i in range(len(e)):
         if(e[i][1]!=0):
             keys=sem_codes[ssem[i]]["supply"]
