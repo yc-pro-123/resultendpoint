@@ -98,7 +98,7 @@ async def invalid_htno(data):
 
 
 
-async def fetch(session,key):
+async def fetch(session,key,rno):
 	data,f_status=None,None
 	print("fetch started....",end="\r")
 	#print(ssem)		
@@ -126,7 +126,7 @@ async def fetch(session,key):
 	            f_status=f_status-p_status	            
 	return [data,f_status]
 
-async def main1(ap):
+async def main1(ap,rno):
     async with aiohttp.ClientSession(timeout=600) as session:
         
         #ap=sem_codes[ssem[0]]["supply"]
@@ -141,7 +141,7 @@ async def main1(ap):
         #async with asyncio.TaskGroup() as t:
         for i in ap:
         	print(i)
-        	heyy.append(fetch(session,i))
+        	heyy.append(fetch(session,i,rno))
         	#results.append(t.create_task(fetch(session,i)))
         #print(results[0].result())
         e=await asyncio.gather(*heyy,return_exceptions=True)
@@ -165,7 +165,7 @@ def index(rno):
     print(r[0],rno)
     details=asyncio.run(info(r[0],rno))
     print("ooooooooo")
-    e=asyncio.run(main1(r))
+    e=asyncio.run(main1(r,rno))
     print(len(e),"\n",e)
 	
     for i in range(len(e)):
@@ -174,7 +174,7 @@ def index(rno):
             if len(keys)==0:
                 continue
             print("Supply Codes",ssem[i],keys)
-            res=asyncio.run(main1(keys))
+            res=asyncio.run(main1(keys,rno))
             print(res,"\n\n")
            
             for up in res:
