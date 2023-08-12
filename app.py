@@ -191,7 +191,7 @@ def index(rno):
     return json.dumps(data)
 
 @app.route('/',methods=["POST","GET"])
-def intro(rno):
+def intro():
     if request.method=="GET":
 	    return "<h1>Welcome !!</h1>"
 @app.route('/rno=<rno>',methods=["POST","GET"])    
