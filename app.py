@@ -1,7 +1,7 @@
-import requests , json , time
+import json
 from bs4 import BeautifulSoup as be
 from timeit import default_timer as timer
-import aiohttp ,requests
+import aiohttp
 import asyncio
 from flask import Flask, request,Response
 import studsem
