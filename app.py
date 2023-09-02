@@ -141,7 +141,7 @@ async def main1(ap,rno):
         #async with asyncio.TaskGroup() as t:
         for i in ap:
         	print(i)
-        	heyy.append(fetch(session,i,rno))
+        	heyy.append(asyncio.create_task(fetch(session,i,rno)))
         	#results.append(t.create_task(fetch(session,i)))
         #print(results[0].result())
         e=await asyncio.gather(*heyy,return_exceptions=True)
